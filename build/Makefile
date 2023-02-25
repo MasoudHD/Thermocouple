@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\mheid\OneDrive\Desktop\ThermoCouple
+CMAKE_SOURCE_DIR = C:\Users\mheid\OneDrive\Desktop\Thermocouple
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\mheid\OneDrive\Desktop\ThermoCouple\build
+CMAKE_BINARY_DIR = C:\Users\mheid\OneDrive\Desktop\Thermocouple\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -77,7 +77,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/mheid/OneDrive/Desktop/ThermoCouple/build/CPackSourceConfig.cmake
+	"C:\Program Files\CMake\bin\cpack.exe" --config ./CPackSourceConfig.cmake C:/Users/mheid/OneDrive/Desktop/Thermocouple/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -116,9 +116,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mheid\OneDrive\Desktop\ThermoCouple\build\CMakeFiles C:\Users\mheid\OneDrive\Desktop\ThermoCouple\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mheid\OneDrive\Desktop\Thermocouple\build\CMakeFiles C:\Users\mheid\OneDrive\Desktop\Thermocouple\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mheid\OneDrive\Desktop\ThermoCouple\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\mheid\OneDrive\Desktop\Thermocouple\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -522,29 +522,29 @@ thermocouple/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\thermocouple.dir\build.make CMakeFiles/thermocouple.dir/build
 .PHONY : thermocouple/fast
 
-thermocouple.obj: thermocouple.cpp.obj
-.PHONY : thermocouple.obj
+main.obj: main.c.obj
+.PHONY : main.obj
 
 # target to build an object file
-thermocouple.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\thermocouple.dir\build.make CMakeFiles/thermocouple.dir/thermocouple.cpp.obj
-.PHONY : thermocouple.cpp.obj
+main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\thermocouple.dir\build.make CMakeFiles/thermocouple.dir/main.c.obj
+.PHONY : main.c.obj
 
-thermocouple.i: thermocouple.cpp.i
-.PHONY : thermocouple.i
+main.i: main.c.i
+.PHONY : main.i
 
 # target to preprocess a source file
-thermocouple.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\thermocouple.dir\build.make CMakeFiles/thermocouple.dir/thermocouple.cpp.i
-.PHONY : thermocouple.cpp.i
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\thermocouple.dir\build.make CMakeFiles/thermocouple.dir/main.c.i
+.PHONY : main.c.i
 
-thermocouple.s: thermocouple.cpp.s
-.PHONY : thermocouple.s
+main.s: main.c.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-thermocouple.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\thermocouple.dir\build.make CMakeFiles/thermocouple.dir/thermocouple.cpp.s
-.PHONY : thermocouple.cpp.s
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\thermocouple.dir\build.make CMakeFiles/thermocouple.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -586,9 +586,9 @@ help:
 	@echo ... NightlyTest
 	@echo ... NightlyUpdate
 	@echo ... thermocouple
-	@echo ... thermocouple.obj
-	@echo ... thermocouple.i
-	@echo ... thermocouple.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

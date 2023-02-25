@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\mheid\OneDrive\Desktop\ThermoCouple
+CMAKE_SOURCE_DIR = C:\Users\mheid\OneDrive\Desktop\Thermocouple
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\mheid\OneDrive\Desktop\ThermoCouple\build
+CMAKE_BINARY_DIR = C:\Users\mheid\OneDrive\Desktop\Thermocouple\build
 
 # Utility rule file for ExperimentalConfigure.
 
@@ -81,6 +81,6 @@ CMakeFiles/ExperimentalConfigure.dir/clean:
 .PHONY : CMakeFiles/ExperimentalConfigure.dir/clean
 
 CMakeFiles/ExperimentalConfigure.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\mheid\OneDrive\Desktop\ThermoCouple C:\Users\mheid\OneDrive\Desktop\ThermoCouple C:\Users\mheid\OneDrive\Desktop\ThermoCouple\build C:\Users\mheid\OneDrive\Desktop\ThermoCouple\build C:\Users\mheid\OneDrive\Desktop\ThermoCouple\build\CMakeFiles\ExperimentalConfigure.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\mheid\OneDrive\Desktop\Thermocouple C:\Users\mheid\OneDrive\Desktop\Thermocouple C:\Users\mheid\OneDrive\Desktop\Thermocouple\build C:\Users\mheid\OneDrive\Desktop\Thermocouple\build C:\Users\mheid\OneDrive\Desktop\Thermocouple\build\CMakeFiles\ExperimentalConfigure.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalConfigure.dir/depend
 

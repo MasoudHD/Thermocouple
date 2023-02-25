@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/mheid/OneDrive/Desktop/ThermoCouple/thermocouple.cpp" "CMakeFiles/thermocouple.dir/thermocouple.cpp.obj" "gcc" "CMakeFiles/thermocouple.dir/thermocouple.cpp.obj.d"
+  "C:/Users/mheid/OneDrive/Desktop/Thermocouple/main.c" "CMakeFiles/thermocouple.dir/main.c.obj" "gcc" "CMakeFiles/thermocouple.dir/main.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

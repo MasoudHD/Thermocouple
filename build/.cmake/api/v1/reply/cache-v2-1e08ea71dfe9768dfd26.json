@@ -83,7 +83,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/mheid/OneDrive/Desktop/ThermoCouple/build"
+			"value" : "c:/Users/mheid/OneDrive/Desktop/Thermocouple/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -187,10 +187,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/MinGW/bin/g++.exe"
 		},
 		{
@@ -331,10 +331,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/MinGW/bin/gcc.exe"
 		},
 		{
@@ -619,7 +619,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/mheid/OneDrive/Desktop/ThermoCouple/build/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/mheid/OneDrive/Desktop/Thermocouple/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -1611,11 +1611,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
+					"value" : "Path to a program."
 				}
 			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
+			"type" : "FILEPATH",
+			"value" : "C:/Program Files/Git/cmd/git.exe"
 		},
 		{
 			"name" : "HGCOMMAND",
@@ -1751,7 +1751,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/mheid/OneDrive/Desktop/ThermoCouple/build"
+			"value" : "C:/Users/mheid/OneDrive/Desktop/Thermocouple/build"
 		},
 		{
 			"name" : "thermocouple_IS_TOP_LEVEL",
@@ -1775,7 +1775,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/mheid/OneDrive/Desktop/ThermoCouple"
+			"value" : "C:/Users/mheid/OneDrive/Desktop/Thermocouple"
 		}
 	],
 	"kind" : "cache",
