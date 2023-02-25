@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Users/mheid/OneDrive/Desktop/Thermocouple/build",
-  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\thermocouple.dir\\main.c.obj -c C:\\Users\\mheid\\OneDrive\\Desktop\\Thermocouple\\main.c",
-  "file": "C:/Users/mheid/OneDrive/Desktop/Thermocouple/main.c",
-  "output": "CMakeFiles/thermocouple.dir/main.c.obj"
-}
-]
