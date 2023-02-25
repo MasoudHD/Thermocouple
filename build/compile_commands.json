@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/mheid/OneDrive/Desktop/ThermoCouple/build",
+  "command": "C:\\MinGW\\bin\\g++.exe   -g -o CMakeFiles\\thermocouple.dir\\thermocouple.cpp.obj -c C:\\Users\\mheid\\OneDrive\\Desktop\\ThermoCouple\\thermocouple.cpp",
+  "file": "C:/Users/mheid/OneDrive/Desktop/ThermoCouple/thermocouple.cpp",
+  "output": "CMakeFiles/thermocouple.dir/thermocouple.cpp.obj"
+}
+]
