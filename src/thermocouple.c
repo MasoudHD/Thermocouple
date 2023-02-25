@@ -1,11 +1,6 @@
 #include "thermocouple.h"
 #include "stdio.h"
 
-#define TC_K_TYPE           0
-#define TC_J_TYPE           1
-#define TC_S_TYPE           2
-#define TC_T_TYPE           3
-
 #define _T0                 0
 #define _V0                 1
 #define _p1                 2
