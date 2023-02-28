@@ -262,7 +262,7 @@ static int findTcEquation(float milliVolt, float *voltageTable, int eqNumber)
  * @param hTcAdc            ADC struct of the TC 
  * @return float            The voltage of the given digital value (ADC value) 
  */
-float readMilliVolt(TcAdcHandler* hTcAdc)
+float readTcVoltage(TcAdcHandler* hTcAdc)
 {
     hTcAdc->Voltage = (float)(((hTcAdc->AdcValue*hTcAdc->Vref)/hTcAdc->Resolution)-hTcAdc->Offset)*1000.0f/hTcAdc->Gain;
     return hTcAdc->Voltage;
