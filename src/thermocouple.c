@@ -17,13 +17,13 @@ static int findTcEquation(float milliVolt, float *voltageTable, int eqNumber);
 #ifdef TC_K_TYPE
 /**
  * @brief                   Coefficients and constant values for calculating the accurate temperature of the thermocouple
- * @param _KTceqNumber       Number of columns in _kTcCoefficients array (Number of equations used for this TC)  
+ * @param _KTcEqNumber       Number of columns in _kTcCoefficients array (Number of equations used for this TC)  
  * @param _kVoltageRanges   Voltages range of TC for different equations and coefficients 
  * @param _kCjcCoefficients Coefficients of cold junction sensor according to TC table. 
  *                          CJC should be in the range of -20~70°C
  * @param _kTcCoefficients  Coefficients of different equations (in different ranges of the table)                   
  */
-    static const int    _KTceqNumber             = 5;
+    static const int    _KTcEqNumber             = 5;
     static float        _kVoltageRanges[6]      = {-6.404, -3.554, 4.096, 16.397, 33.275, 69.553};
     static float        _kCjcCoefficients[9]    = {2.5000000E+01, 1.0003453E+00, 4.0514854E-02, -3.8789638E-05, -2.8608478E-06, -9.5367041E-10, -1.3948675E-03, -6.7976627E-05};
     static float        _kTcCoefficients[9][5]  = {
@@ -42,13 +42,13 @@ static int findTcEquation(float milliVolt, float *voltageTable, int eqNumber);
 #ifdef TC_J_TYPE
 /**
  * @brief                   Coefficients and constant values for calculating the accurate temperature of the thermocouple
- * @param _jTceqNumber       Number of columns in _jTcCoefficients array (Number of equations used for this TC)  
+ * @param _jTcEqNumber       Number of columns in _jTcCoefficients array (Number of equations used for this TC)  
  * @param _jVoltageRanges   Voltages range of TC for different equations and coefficients 
  * @param _jCjcCoefficients Coefficients of cold junction sensor according to TC table. 
  *                          CJC should be in the range of -20~70°C
  * @param _jTcCoefficients  Coefficients of different equations (in different ranges of the table)                   
  */
-    static const int    _jTceqNumber             = 5;
+    static const int    _jTcEqNumber             = 5;
     static float        _jVoltageRanges[6]      = {-8.095, 0, 21.840, 45.494, 57.953, 69.553};
     static float        _jCjcCoefficients[9]    = {2.5000000E+01, 1.2773432E+00, 5.1744084E-02, -5.4138663E-05, -2.2895769E-06, -7.7947143E-10, -1.5173342E-03, -6.7976627E-05};
     static float        _jTcCoefficients[9][5]  = {
@@ -67,13 +67,13 @@ static int findTcEquation(float milliVolt, float *voltageTable, int eqNumber);
 #ifdef TC_S_TYPE
 /**
  * @brief                   Coefficients and constant values for calculating the accurate temperature of the thermocouple
- * @param _sTceqNumber       Number of columns in _sTcCoefficients array (Number of equations used for this TC)  
+ * @param _sTcEqNumber       Number of columns in _sTcCoefficients array (Number of equations used for this TC)  
  * @param _sVoltageRanges   Voltages range of TC for different equations and coefficients 
  * @param _sCjcCoefficients Coefficients of cold junction sensor according to TC table. 
  *                          CJC should be in the range of -20~70°C
  * @param _sTcCoefficients  Coefficients of different equations (in different ranges of the table)                   
  */
-    static const int    _sTceqNumber             = 4;
+    static const int    _sTcEqNumber             = 4;
     static float        _sVoltageRanges[5]      = {-0.236, 1.441, 6.913, 12.856, 18.693};
     static float        _sCjcCoefficients[9]    = {2.5000000E+01, 1.4269163E-01, 5.9829057E-03, 4.5292259E-06, -1.3380281E-06, -2.3742577E-09, -1.0650446E-03, -2.2042420E-04};
     static float        _sTcCoefficients[9][4]  = {
@@ -92,13 +92,13 @@ static int findTcEquation(float milliVolt, float *voltageTable, int eqNumber);
 #ifdef TC_T_TYPE
 /**
  * @brief                   Coefficients and constant values for calculating the accurate temperature of the thermocouple
- * @param _tTceqNumber       Number of columns in _tTcCoefficients array (Number of equations used for this TC)  
+ * @param _tTcEqNumber       Number of columns in _tTcCoefficients array (Number of equations used for this TC)  
  * @param _tVoltageRanges   Voltages range of TC for different equations and coefficients 
  * @param _tCjcCoefficients Coefficients of cold junction sensor according to TC table. 
  *                          CJC should be in the range of -20~70°C
  * @param _tTcCoefficients  Coefficients of different equations (in different ranges of the table)                   
  */
-    static const int    _tTceqNumber             = 4;
+    static const int    _tTcEqNumber             = 4;
     static float        _tVoltageRanges[5]      = {-6.18 , -4.648, 0.0, 9.288, 20.872};
     static float        _tCjcCoefficients[9]    = {2.5000000E+01, 9.9198279E-01, 4.0716564E-02, 7.1170297E-04, 6.8782631E-07 ,  4.3295061E-11 , 1.6458102E-02, 0.0};
     static float        _tTcCoefficients[9][4]  = {
@@ -138,7 +138,7 @@ float getTcTemp(char type, float voltage, float cjc,TempUnit tu)
     {
         case TC_TYPE_K:
             #ifdef TC_K_TYPE
-                index = findTcEquation(voltage, _kVoltageRanges, _KTceqNumber);
+                index = findTcEquation(voltage, _kVoltageRanges, _KTcEqNumber);
                 if(index==(unsigned int)ERR_OVER_VOLTAGE || index==(unsigned int)ERR_LOW_VOLTAGE)
                 {
                     return (float)index;
@@ -155,7 +155,7 @@ float getTcTemp(char type, float voltage, float cjc,TempUnit tu)
             break;
         case TC_TYPE_J:
             #ifdef TC_J_TYPE
-                index = findTcEquation(voltage, _jVoltageRanges, _jTceqNumber);
+                index = findTcEquation(voltage, _jVoltageRanges, _jTcEqNumber);
                 if(index==(unsigned int)ERR_OVER_VOLTAGE || index==(unsigned int)ERR_LOW_VOLTAGE)
                 {
                     return (float)index;
@@ -172,7 +172,7 @@ float getTcTemp(char type, float voltage, float cjc,TempUnit tu)
             break;
         case TC_TYPE_S:
             #ifdef TC_S_TYPE
-                index = findTcEquation(voltage, _sVoltageRanges, _sTceqNumber);
+                index = findTcEquation(voltage, _sVoltageRanges, _sTcEqNumber);
                 if(index==(unsigned int)ERR_OVER_VOLTAGE || index==(unsigned int)ERR_LOW_VOLTAGE)
                 {
                     return (float)index;
@@ -189,7 +189,7 @@ float getTcTemp(char type, float voltage, float cjc,TempUnit tu)
             break;
         case TC_TYPE_T:
             #ifdef TC_T_TYPE
-                index = findTcEquation(voltage, _tVoltageRanges, _tTceqNumber);
+                index = findTcEquation(voltage, _tVoltageRanges, _tTcEqNumber);
                 if(index==(unsigned int)ERR_OVER_VOLTAGE || index==(unsigned int)ERR_LOW_VOLTAGE)
                 {
                     return (float)index;
