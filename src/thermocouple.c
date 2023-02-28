@@ -125,7 +125,7 @@ static int findTcEquation(float milliVolt, float *voltageTable, int eqNumber);
  * @param tu                The desired  unit of the TC temperature (selectable in TempUnit enum)
  * @return float            Return the TC temperature according to the desired  unit  
  */
-float getTcTemp(char type, float voltage, float cjc,TempUnit tu)
+float getTcTemp(TcType type, float voltage, float cjc,TempUnit tu)
 {
     unsigned int index,i;
     float cTc[9];

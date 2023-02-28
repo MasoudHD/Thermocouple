@@ -51,7 +51,7 @@ typedef struct
 }TcAdcHandler;
 
 float readTcVoltage(TcAdcHandler* hTcAdc);
-float getTcTemp(char type, float voltage, float cjc,TempUnit tu);
+float getTcTemp(TcType type, float voltage, float cjc,TempUnit tu);
 float c2f(float tempInC);
 float f2c(float tempInF);
 
