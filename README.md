@@ -8,6 +8,10 @@ I have used the following website as my reference:
 
 http://www.mosaic-industries.com/embedded-systems/microcontroller-projects/microcontroller
 
+For more information about how to use this library you can watch this video:
+
+https://youtu.be/kuQf-JUNUAA
+
 ## Notice!!!
 
 This is an open-source library, and I can not guarantee that it is bug-free and operate without any problem, so be careful about using this library in sensitive applications and double-check its performance.
