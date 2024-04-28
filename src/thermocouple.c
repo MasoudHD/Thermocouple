@@ -149,7 +149,7 @@ float getTcTemp(TcType type, float voltage, float cjc,TempUnit tu)
                     cCjc[i] = _kCjcCoefficients[i];
                 }
             #else
-                printf("K type thermocouple is not enabled\n");
+                DEBUG("K type thermocouple is not enabled\n");
                 return 0;
             #endif
             break;
@@ -166,7 +166,7 @@ float getTcTemp(TcType type, float voltage, float cjc,TempUnit tu)
                     cCjc[i] = _jCjcCoefficients[i];
                 }
             #else
-                printf("J type thermocouple is not enabled\n");
+                DEBUG("J type thermocouple is not enabled\n");
                 return 0;
             #endif
             break;
@@ -183,7 +183,7 @@ float getTcTemp(TcType type, float voltage, float cjc,TempUnit tu)
                     cCjc[i] = _sCjcCoefficients[i];
                 }
             #else
-                printf("S type thermocouple is not enabled\n");
+                DEBUG("S type thermocouple is not enabled\n");
                 return 0;
             #endif
             break;
@@ -200,7 +200,7 @@ float getTcTemp(TcType type, float voltage, float cjc,TempUnit tu)
                     cCjc[i] = _tCjcCoefficients[i];
                 }
             #else
-                printf("T type thermocouple is not enabled\n");
+                DEBUG("T type thermocouple is not enabled\n");
                 return 0;
             #endif
             break;

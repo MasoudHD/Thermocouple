@@ -13,7 +13,7 @@
 #define ERR_OVER_VOLTAGE    (float)0xffff
 #define ERR_LOW_VOLTAGE     (float)0xefff
 
-
+#define DEBUG               printf
 /**
  * @brief           enum of different type of TC
  * 

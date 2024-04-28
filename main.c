@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "inc/thermocouple.h"
+#include "thermocouple.h"
 
 int main()
 {
