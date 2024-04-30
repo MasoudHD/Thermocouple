@@ -6,12 +6,17 @@ By using this C library you can calculate the accurate temperature of a thermoco
 
 I have used the following website as my reference:
 
-http://www.mosaic-industries.com/embedded-systems/microcontroller-projects/microcontroller
+<http://www.mosaic-industries.com/embedded-systems/microcontroller-projects/microcontroller>
 
 For more information about how to use this library you can watch this video:
 
-https://youtu.be/kuQf-JUNUAA
+<https://youtu.be/kuQf-JUNUAA>
 
-## Notice!!!
+## Notice
 
 This is an open-source library, and I can not guarantee that it is bug-free and operate without any problem, so be careful about using this library in sensitive applications and double-check its performance.
+
+## TODO
+
+- [ ] Support Lookup Table
+- [ ] Add Other types of thermocouples (R, N, E, B)
