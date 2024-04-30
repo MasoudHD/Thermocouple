@@ -7,7 +7,7 @@
 
 #define TC_K_TYPE           0
 // #define TC_J_TYPE           1
-#define TC_S_TYPE           2
+// #define TC_S_TYPE           2
 // #define TC_T_TYPE           3
 
 #define ERR_OVER_VOLTAGE    (float)0xffff
@@ -33,7 +33,8 @@ typedef enum
 typedef enum
 {
   TU_C          = 0,
-  TU_F          
+  TU_F,
+  TU_K          
 }TempUnit;
 
 /**
@@ -52,8 +53,7 @@ typedef struct
 
 float readTcVoltage(TcAdcHandler* hTcAdc);
 float getTcTemp(TcType type, float voltage, float cjc,TempUnit tu);
-float c2f(float tempInC);
-float f2c(float tempInF);
+float unitConvert(TempUnit from, TempUnit to, float temp);
 
 
 #ifdef __cplusplus

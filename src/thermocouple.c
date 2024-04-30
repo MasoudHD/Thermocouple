@@ -218,7 +218,9 @@ float getTcTemp(TcType type, float voltage, float cjc,TempUnit tu)
         case TU_C:
             return hjTemp;
         case TU_F:
-            return c2f(hjTemp);
+            return unitConvert(TU_C, TU_F, hjTemp);
+        case TU_K:
+            return unitConvert(TU_C, TU_K, hjTemp);
         default:
             break;
     }
@@ -268,26 +270,42 @@ float readTcVoltage(TcAdcHandler* hTcAdc)
     return hTcAdc->Voltage;
 }
 
-
 /**
- * @brief                   Convert the Celsius degree to Fahrenheit
+ * @brief                   Convert all types of temperature scales to each other
  * 
- * @param tempInC           Temperature value in °C 
- * @return float            Temperature value in °F  
+ * @param from              The base unit (from TempUnit enum) 
+ * @param to                The target unit (from TempUnit enum)  
+ * @param temp              The base temperature value 
+ * @return float            The converted value. If in input arguments have any error it return given temperature (the temp value)  
  */
-float c2f(float tempInC)
+float unitConvert(TempUnit from, TempUnit to, float temp)
 {
-    return (tempInC*1.8)+32;
-}
+    if(from == TU_C && to == TU_F)
+    {
+        return (temp*1.8)+32;
+    }
+    if(from == TU_C && to == TU_K)
+    {
+        return temp+273.15;
+    }
 
+    if(from == TU_F && to == TU_C)
+    {
+        return (temp-32)/1.8;
+    }
+    if(from == TU_F && to == TU_K)
+    {
+        return (temp-32)*5/9+273.15; 
+    }
 
-/**
- * @brief                   Convert the Fahrenheit degree to Celsius               
- * 
- * @param tempInF           Temperature value in °F
- * @return float            Temperature value in °C 
- */
-float f2c(float tempInF)
-{
-    return (tempInF-32)/1.8;
+    if(from == TU_K && to == TU_C)
+    {
+        return temp-237.15;
+    }
+    if(from == TU_K && to == TU_F)
+    {
+        return (temp-273.15)*9/5+32;
+    }
+
+    return temp;
 }
