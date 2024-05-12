@@ -1,22 +1,20 @@
 # Thermocouple
 
-Convert the voltage of different types of thermocouples to accurate temperature by using polynomial equations and considering cold junction temperature.
+Easily obtain accurate temperature readings from various types of thermocouples using polynomial equations and Lookup Table methods, including cold junction compensation.
 
-By using this C library you can calculate the accurate temperature of a thermocouple (TC). Using this library is easy; however, you can find a simple example in the main.c file.
+This C library streamlines the process of calculating precise thermocouple (TC) temperatures. Integration is straightforward, and a comprehensive example is provided in the `main.c` file for your convenience.
 
-I have used the following website as my reference:
+For detailed insights and usage instructions, refer to the following resources:
 
-<http://www.mosaic-industries.com/embedded-systems/microcontroller-projects/microcontroller>
-
-For more information about how to use this library you can watch this video:
-
-<https://youtu.be/kuQf-JUNUAA>
+- **Reference:** Explore the methodology behind this library through the comprehensive documentation provided at [Mosaic Industries](http://www.mosaic-industries.com/embedded-systems/microcontroller-projects/microcontroller).
+- **Tutorial Video:** Get started quickly by watching our instructional video on [YouTube](https://youtu.be/kuQf-JUNUAA).
 
 ## Notice
 
-This is an open-source library, and I can not guarantee that it is bug-free and operate without any problem, so be careful about using this library in sensitive applications and double-check its performance.
+While this library is open-source and freely available, please exercise caution when integrating it into critical applications. While I strive for reliability, I cannot guarantee bug-free operation in all scenarios. Always verify its performance for your specific use case.
 
-## TODO
+## To-Do List
 
-- [ ] Support Lookup Table
-- [ ] Add Other types of thermocouples (R, N, E, B)
+- [x] Support Lookup Table functionality.
+- [ ] Implement binary search algorithm for enhanced performance in Lookup Table mode.
+- [ ] Extend thermocouple support to include additional types.
